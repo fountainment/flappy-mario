@@ -52,7 +52,7 @@ class imageObj:
         if filename != None:
             pic = Image.open(filename)
             self.oriSize = pic.size[:]
-            self.pics = pic.tostring("raw", "RGBA", 0, -1)
+            self.pics = pic.tobytes("raw", "RGBA", 0, -1)
         else:
             self.pics = string
             self.oriSize = (w, h)
